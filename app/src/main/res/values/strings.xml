@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Karate Counter</string>
+    <string name="instructionsStr">Yuko (1 Point): Mid or Upper level punch. Waza-Ari (2 Points): Mid level kicks. Ippon (3 Points): Upper level kick or any scoring on a thrown opponent.
+Penalties: 4 penalties mean disqualification of contestant.</string>
+</resources>

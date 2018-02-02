@@ -8,9 +8,11 @@
     <dimen name="button_margin_vertical">8dp</dimen>
     <dimen name="button_large">24dp</dimen>
     <dimen name="text_score_size">56sp</dimen>
+    <dimen name="text_score_size_vertical">40sp</dimen>
     <dimen name="text_label_size">14sp</dimen>
     <dimen name="team_label_margin_vertical">16dp</dimen>
     <dimen name="small_text">10sp</dimen>
     <dimen name="spacer">15dp</dimen>
     <dimen name="penalty_card_margin">2dp</dimen>
+    <dimen name="score_spacer_horizontal">6dp</dimen>
 </resources>

@@ -1,11 +1,15 @@
 package com.example.android.karatecounter;
 
+import android.content.Context;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 import android.app.AlertDialog;
+import android.widget.Toast;
+
 /**
  * the following import is needed to read the color from the colors.xml
  * import android.content.Context;
@@ -14,10 +18,15 @@ import android.app.AlertDialog;
 
 public class MainActivity extends AppCompatActivity {
 
-    int scoreContestant1, scoreContestant2, penaltiesContestant1, penaltiesContestant2 = 0;
+    int scoreContestant1, scoreContestant2, penaltiesContestant1, penaltiesContestant2;
     String penaltyYellowColor = "#FFAE18";
     String penaltyRedColor = "#FF2600";
     String penaltyClearColor = "#e7e7e7";
+    final static String SCORE_CONTESTANT_1 = "SavedStateOfContestant1Score";
+    final static String SCORE_CONTESTANT_2 = "SavedStateOfContestant2Score";
+    final static String PENALTIES_CONTESTANT_1 = "SavedStateOfContestant1Penalties";
+    final static String PENALTIES_CONTESTANT_2 = "SavedStateOfContestant2Penalties";
+
     /**
      * The following lines get the colors from the colors.xml file and store their integer
      * but it crashes the app
@@ -29,9 +38,54 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        /** recovering the instance state */
+        if (savedInstanceState != null) {
+            scoreContestant1 = Integer.valueOf(savedInstanceState.getString(SCORE_CONTESTANT_1));
+            scoreContestant2 = Integer.valueOf(savedInstanceState.getString(SCORE_CONTESTANT_2));
+            penaltiesContestant1 = Integer.valueOf(savedInstanceState.getString(PENALTIES_CONTESTANT_1));
+            penaltiesContestant2 = Integer.valueOf(savedInstanceState.getString(PENALTIES_CONTESTANT_2));
+        }
         setContentView(R.layout.activity_main);
+        displayScoreFor1(scoreContestant1);
+        displayScoreFor2(scoreContestant2);
+        displayPenaltiesFor1(penaltiesContestant1);
+        displayPenaltiesFor2(penaltiesContestant2);
+        reloadPenaltyCardsForContestantOne();
+        reloadPenaltyCardsForContestantTwo();
     }
 
+    /**
+     * Save state for later callback
+     * @param outState
+     */
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
+        outState.putString(SCORE_CONTESTANT_1, Integer.valueOf(scoreContestant1).toString());
+        outState.putString(SCORE_CONTESTANT_2, Integer.valueOf(scoreContestant2).toString());
+        outState.putString(PENALTIES_CONTESTANT_1, Integer.valueOf(penaltiesContestant1).toString());
+        outState.putString(PENALTIES_CONTESTANT_2, Integer.valueOf(penaltiesContestant2).toString());
+
+        super.onSaveInstanceState(outState);
+    }
+
+    /**
+     * This callback is called only when there is a saved instance previously saved using
+     * onSaveInstanceState(). We restore some state in onCreate() while we can optionally restore
+     * other state here, possibly usable after onStart() has completed.
+     * The savedInstanceState Bundle is same as the one used in onCreate().
+     */
+
+    @Override
+    public void onRestoreInstanceState(Bundle savedInstanceState) {
+        scoreContestant1 = Integer.valueOf(savedInstanceState.getString(SCORE_CONTESTANT_1));
+        scoreContestant2 = Integer.valueOf(savedInstanceState.getString(SCORE_CONTESTANT_2));
+        penaltiesContestant1 = Integer.valueOf(savedInstanceState.getString(PENALTIES_CONTESTANT_1));
+        penaltiesContestant2 = Integer.valueOf(savedInstanceState.getString(PENALTIES_CONTESTANT_2));
+        displayScoreFor1(scoreContestant1);
+        displayScoreFor2(scoreContestant2);
+        displayPenaltiesFor1(penaltiesContestant1);
+        displayPenaltiesFor2(penaltiesContestant2);
+    }
     /**
      * Method to display score for contestant 1
      * @param score
@@ -113,12 +167,38 @@ public class MainActivity extends AppCompatActivity {
             setPenaltyCard3Contestant1Color(penaltyYellowColor);
         } else {
             setPenaltyCard4Contestant1Color(penaltyRedColor);
-            AlertDialog.Builder dlgAlert  = new AlertDialog.Builder(this);
-            dlgAlert.setMessage("Contestant 1 has been automatically disqualified after getting 4 penalties");
-            dlgAlert.setTitle("Disqualified");
-            dlgAlert.setPositiveButton("OK", null);
-            dlgAlert.setCancelable(true);
-            dlgAlert.create().show();
+            //AlertDialog.Builder dlgAlert  = new AlertDialog.Builder(this);
+            //dlgAlert.setMessage("Contestant 1 has been automatically disqualified after getting 4 penalties");
+            //dlgAlert.setTitle("Disqualified");
+            //dlgAlert.setPositiveButton("OK", null);
+            //dlgAlert.setCancelable(true);
+            //dlgAlert.create().show();
+            Context context = this;
+            Toast disqMessage = Toast.makeText(context, "Contestant 1 has been disqualified", Toast.LENGTH_LONG);
+            disqMessage.show();
+        }
+    }
+
+    /**
+     * This method is called to reload the card colors onCreate or onRestore
+     */
+    private void reloadPenaltyCardsForContestantOne () {
+        if (penaltiesContestant1 == 0) {
+            return;
+        } else if (penaltiesContestant1 == 1) {
+            setPenaltyCard1Contestant1Color(penaltyYellowColor);
+        } else if (penaltiesContestant1 == 2) {
+            setPenaltyCard2Contestant1Color(penaltyYellowColor);
+            setPenaltyCard1Contestant1Color(penaltyYellowColor);
+        } else if (penaltiesContestant1 == 3) {
+            setPenaltyCard3Contestant1Color(penaltyYellowColor);
+            setPenaltyCard2Contestant1Color(penaltyYellowColor);
+            setPenaltyCard1Contestant1Color(penaltyYellowColor);
+        } else {
+            setPenaltyCard4Contestant1Color(penaltyRedColor);
+            setPenaltyCard3Contestant1Color(penaltyYellowColor);
+            setPenaltyCard2Contestant1Color(penaltyYellowColor);
+            setPenaltyCard1Contestant1Color(penaltyYellowColor);
         }
     }
 
@@ -172,6 +252,29 @@ public class MainActivity extends AppCompatActivity {
             dlgAlert.create().show();
         }
 
+    }
+
+    /**
+     * This method is called to reload the card colors onCreate or onRestore
+     */
+    private void reloadPenaltyCardsForContestantTwo () {
+        if (penaltiesContestant2 == 0) {
+            return;
+        } else if (penaltiesContestant2 == 1) {
+            setPenaltyCard1Contestant2Color(penaltyYellowColor);
+        } else if (penaltiesContestant2 == 2) {
+            setPenaltyCard2Contestant2Color(penaltyYellowColor);
+            setPenaltyCard1Contestant2Color(penaltyYellowColor);
+        } else if (penaltiesContestant2 == 3) {
+            setPenaltyCard3Contestant2Color(penaltyYellowColor);
+            setPenaltyCard2Contestant2Color(penaltyYellowColor);
+            setPenaltyCard1Contestant2Color(penaltyYellowColor);
+        } else {
+            setPenaltyCard3Contestant2Color(penaltyYellowColor);
+            setPenaltyCard2Contestant2Color(penaltyYellowColor);
+            setPenaltyCard1Contestant2Color(penaltyYellowColor);
+            setPenaltyCard4Contestant2Color(penaltyRedColor);
+        }
     }
 
     /** the following method is the variant that uses the color from the xml,

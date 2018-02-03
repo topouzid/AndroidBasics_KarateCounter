@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.android.karatecounter.CounterActivity"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:padding="30dp">
+
+    <ImageView
+        android:layout_width="@dimen/login_image_x"
+        android:layout_height="@dimen/login_image_y"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/karate"/>
+    <EditText
+        android:id="@+id/edit_contestant_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textCapWords"
+        android:hint="@string/contestant_1_name_hint"
+        android:textAlignment="center"/>
+    <EditText
+        android:id="@+id/edit_contestant_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textCapWords"
+        android:hint="@string/contestant_2_name_hint"
+        android:textAlignment="center"/>
+    <Button
+        android:id="@+id/fight_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/fight_button_text"
+        android:layout_margin="20dp"
+        android:paddingLeft="@dimen/large_button_padding_horizontal"
+        android:paddingRight="@dimen/large_button_padding_horizontal"
+        android:textSize="@dimen/large_button_text_size"
+        android:fontFamily="sans-serif-light"
+        android:onClick="goToMainActivity"/>
+</LinearLayout>

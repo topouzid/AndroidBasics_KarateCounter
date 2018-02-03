@@ -2,4 +2,18 @@
     <string name="app_name">Karate Counter</string>
     <string name="instructionsStr">Yuko (1 Point): Mid or Upper level punch. Waza-Ari (2 Points): Mid level kicks. Ippon (3 Points): Upper level kick or any scoring on a thrown opponent.
 Penalties: 4 penalties mean disqualification of contestant.</string>
+    <string name="contestant_1">Contestant 1</string>
+    <string name="contestant_2">Contestant 2</string>
+    <string name="one_point">Yuko</string>
+    <string name="two_points">Waza-Ari</string>
+    <string name="three_points">Ippon</string>
+    <string name="new_match">New Match</string>
+    <string name="penalties">Penalties:</string>
+    <string name="disqualified_toast_message">" has been disqualified"</string>
+    <string name="disqualified_title">Disqualified</string>
+    <string name="disqualified_dialogue">" has been automatically disqualified after getting 4 penalties"</string>
+    <string name="contestant_1_name_hint">"Enter 1st contestant\'s name"</string>
+    <string name="contestant_2_name_hint">"Enter 2nd contestant\'s name"</string>
+    <string name="fight_button_text">Fight</string>
+    <string name="penalty_button_text">Penalty</string>
 </resources>

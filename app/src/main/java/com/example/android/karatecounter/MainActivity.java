@@ -1,6 +1,7 @@
 package com.example.android.karatecounter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -26,6 +27,10 @@ public class MainActivity extends AppCompatActivity {
     final static String SCORE_CONTESTANT_2 = "SavedStateOfContestant2Score";
     final static String PENALTIES_CONTESTANT_1 = "SavedStateOfContestant1Penalties";
     final static String PENALTIES_CONTESTANT_2 = "SavedStateOfContestant2Penalties";
+    final static String CONTESTANT_1_NAME = "SavedStateOfContestant1Name";
+    final static String CONTESTANT_2_NAME = "SavedStateOfContestant2Name";
+    String contestant1Name = "name1";
+    String contestant2Name = "name2";
 
     /**
      * The following lines get the colors from the colors.xml file and store their integer
@@ -44,6 +49,11 @@ public class MainActivity extends AppCompatActivity {
             scoreContestant2 = Integer.valueOf(savedInstanceState.getString(SCORE_CONTESTANT_2));
             penaltiesContestant1 = Integer.valueOf(savedInstanceState.getString(PENALTIES_CONTESTANT_1));
             penaltiesContestant2 = Integer.valueOf(savedInstanceState.getString(PENALTIES_CONTESTANT_2));
+            contestant1Name = savedInstanceState.getString(CONTESTANT_1_NAME);
+            contestant2Name = savedInstanceState.getString(CONTESTANT_2_NAME);
+        } else {
+            contestant1Name = getIntent().getExtras().getString("nameCont1");
+            contestant2Name = getIntent().getExtras().getString("nameCont2");
         }
         setContentView(R.layout.activity_main);
         displayScoreFor1(scoreContestant1);
@@ -52,6 +62,7 @@ public class MainActivity extends AppCompatActivity {
         displayPenaltiesFor2(penaltiesContestant2);
         reloadPenaltyCardsForContestantOne();
         reloadPenaltyCardsForContestantTwo();
+        setContestantNames(contestant1Name, contestant2Name);
     }
 
     /**
@@ -64,6 +75,8 @@ public class MainActivity extends AppCompatActivity {
         outState.putString(SCORE_CONTESTANT_2, Integer.valueOf(scoreContestant2).toString());
         outState.putString(PENALTIES_CONTESTANT_1, Integer.valueOf(penaltiesContestant1).toString());
         outState.putString(PENALTIES_CONTESTANT_2, Integer.valueOf(penaltiesContestant2).toString());
+        outState.putString(CONTESTANT_1_NAME, contestant1Name);
+        outState.putString(CONTESTANT_2_NAME, contestant2Name);
 
         super.onSaveInstanceState(outState);
     }
@@ -85,6 +98,8 @@ public class MainActivity extends AppCompatActivity {
         displayScoreFor2(scoreContestant2);
         displayPenaltiesFor1(penaltiesContestant1);
         displayPenaltiesFor2(penaltiesContestant2);
+        contestant1Name = (String) savedInstanceState.getString(CONTESTANT_1_NAME);
+        contestant2Name = (String) savedInstanceState.getString(CONTESTANT_2_NAME);
     }
     /**
      * Method to display score for contestant 1
@@ -174,7 +189,7 @@ public class MainActivity extends AppCompatActivity {
             //dlgAlert.setCancelable(true);
             //dlgAlert.create().show();
             Context context = this;
-            Toast disqMessage = Toast.makeText(context, "Contestant 1 has been disqualified", Toast.LENGTH_LONG);
+            Toast disqMessage = Toast.makeText(context, contestant1Name+getText(R.string.disqualified_toast_message), Toast.LENGTH_LONG);
             disqMessage.show();
         }
     }
@@ -245,8 +260,8 @@ public class MainActivity extends AppCompatActivity {
         } else {
             setPenaltyCard4Contestant2Color(penaltyRedColor);
             AlertDialog.Builder dlgAlert  = new AlertDialog.Builder(this);
-            dlgAlert.setMessage("Contestant 2 has been automatically disqualified after getting 4 penalties");
-            dlgAlert.setTitle("Disqualified");
+            dlgAlert.setMessage(contestant2Name + getText(R.string.disqualified_dialogue));
+            dlgAlert.setTitle(getText(R.string.disqualified_title));
             dlgAlert.setPositiveButton("OK", null);
             dlgAlert.setCancelable(true);
             dlgAlert.create().show();
@@ -343,6 +358,16 @@ public class MainActivity extends AppCompatActivity {
         setPenaltyCard3Contestant2Color(penaltyClearColor);
         setPenaltyCard4Contestant1Color(penaltyClearColor);
         setPenaltyCard4Contestant2Color(penaltyClearColor);
+        Intent nameActivity = new Intent(this, CounterActivity.class);
+        startActivity(nameActivity);
+        finish();
 
+    }
+
+    public void setContestantNames (String name1, String name2) {
+        TextView contestant1 = (TextView) findViewById(R.id.text_contestant_1);
+        TextView contestant2 = (TextView) findViewById(R.id.text_contestant_2);
+        contestant1.setText(name1);
+        contestant2.setText(name2);
     }
 }

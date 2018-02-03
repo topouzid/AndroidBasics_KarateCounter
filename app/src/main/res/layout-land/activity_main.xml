@@ -15,12 +15,13 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
             <TextView
+                android:id="@+id/text_contestant_1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingTop="@dimen/label_padding"
                 android:fontFamily="sans-serif-medium"
                 android:textSize="@dimen/text_label_size"
-                android:text="Contestant 1"
+                android:text="@string/contestant_1"
                 android:gravity="center_horizontal"/>
 
             <RelativeLayout
@@ -35,7 +36,7 @@
                     android:fontFamily="sans-serif-medium"
                     android:textSize="@dimen/text_label_size"
                     android:padding="@dimen/label_padding"
-                    android:text="Penalties:" />
+                    android:text="@string/penalties" />
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -80,28 +81,28 @@
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Yuko"
+                android:text="@string/one_point"
                 android:layout_marginLeft="@dimen/button_margin_horizontal"
                 android:layout_marginRight="@dimen/button_margin_horizontal"
                 android:onClick="addOneForContestantOne_YUKO"/>
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Waza-Ari"
+                android:text="@string/two_points"
                 android:layout_marginLeft="@dimen/button_margin_horizontal"
                 android:layout_marginRight="@dimen/button_margin_horizontal"
                 android:onClick="addTwoForContestantOne_WAZAARI"/>
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Nippon"
+                android:text="@string/three_points"
                 android:layout_marginLeft="@dimen/button_margin_horizontal"
                 android:layout_marginRight="@dimen/button_margin_horizontal"
                 android:onClick="addThreeForContestantOne_NIPPON"/>
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Penalty"
+                android:text="@string/penalty_button_text"
                 android:layout_marginTop="@dimen/button_margin_vertical"
                 android:layout_marginLeft="@dimen/button_margin_horizontal"
                 android:layout_marginRight="@dimen/button_margin_horizontal"
@@ -161,12 +162,13 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
             <TextView
+                android:id="@+id/text_contestant_2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingTop="@dimen/label_padding"
                 android:fontFamily="sans-serif-medium"
                 android:textSize="@dimen/text_label_size"
-                android:text="Contestant 2"
+                android:text="@string/contestant_2"
                 android:gravity="center_horizontal"/>
 
             <RelativeLayout
@@ -181,7 +183,7 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="sans-serif-medium"
                     android:padding="@dimen/label_padding"
-                    android:text="Penalties:"
+                    android:text="@string/penalties"
                     android:textSize="@dimen/text_label_size" />
 
                 <LinearLayout
@@ -233,28 +235,28 @@
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Yuko"
+                android:text="@string/one_point"
                 android:layout_marginLeft="@dimen/button_margin_horizontal"
                 android:layout_marginRight="@dimen/button_margin_horizontal"
                 android:onClick="addOneForContestantTwo_YUKO"/>
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Waza-Ari"
+                android:text="@string/two_points"
                 android:layout_marginLeft="@dimen/button_margin_horizontal"
                 android:layout_marginRight="@dimen/button_margin_horizontal"
                 android:onClick="addTwoForContestantTwo_WAZAARI"/>
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Nippon"
+                android:text="@string/three_points"
                 android:layout_marginLeft="@dimen/button_margin_horizontal"
                 android:layout_marginRight="@dimen/button_margin_horizontal"
                 android:onClick="addThreeForContestantTwo_NIPPON"/>
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Penalty"
+                android:text="@string/penalty_button_text"
                 android:layout_marginTop="@dimen/button_margin_vertical"
                 android:layout_marginLeft="@dimen/button_margin_horizontal"
                 android:layout_marginRight="@dimen/button_margin_horizontal"
@@ -269,7 +271,7 @@
         android:layout_above="@id/instructionsText"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="@dimen/spacer"
-        android:text="New Match"
+        android:text="@string/new_match"
         android:onClick="newMatch"/>
     <TextView
         android:id="@+id/instructionsText"

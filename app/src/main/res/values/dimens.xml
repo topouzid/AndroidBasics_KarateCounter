@@ -18,6 +18,8 @@
     <dimen name="score_spacer_horizontal">6dp</dimen>
     <dimen name="login_image_x">200dp</dimen>
     <dimen name="login_image_y">160dp</dimen>
+    <dimen name="login_small_image_x">100dp</dimen>
+    <dimen name="login_small_image_y">80dp</dimen>
     <dimen name="large_button_padding_horizontal">26dp</dimen>
     <dimen name="large_button_text_size">26sp</dimen>
     <dimen name="landscape_button_margin">20dp</dimen>

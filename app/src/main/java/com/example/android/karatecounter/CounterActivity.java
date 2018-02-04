@@ -34,7 +34,6 @@ public class CounterActivity extends AppCompatActivity {
     public void onSaveInstanceState(Bundle outState) {
         outState.putString(CONTESTANT_1_NAME, contestant1Name);
         outState.putString(CONTESTANT_2_NAME, contestant2Name);
-
         super.onSaveInstanceState(outState);
     }
 

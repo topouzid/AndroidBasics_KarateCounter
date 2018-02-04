@@ -364,6 +364,11 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    /**
+     * set names to textviews
+     * @param name1 1st Contestant's name
+     * @param name2 2nd Contestant's name
+     */
     public void setContestantNames (String name1, String name2) {
         TextView contestant1 = (TextView) findViewById(R.id.text_contestant_1);
         TextView contestant2 = (TextView) findViewById(R.id.text_contestant_2);

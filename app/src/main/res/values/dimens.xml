@@ -2,6 +2,7 @@
 <resources>
     <dimen name="activity_horizontal_margin">24dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin_landscape">6dp</dimen>
     <dimen name="label_padding">4dp</dimen>
     <dimen name="button_margin_default">4dp</dimen>
     <dimen name="button_margin_horizontal">24dp</dimen>
@@ -19,4 +20,5 @@
     <dimen name="login_image_y">160dp</dimen>
     <dimen name="large_button_padding_horizontal">26dp</dimen>
     <dimen name="large_button_text_size">26sp</dimen>
+    <dimen name="landscape_button_margin">20dp</dimen>
 </resources>

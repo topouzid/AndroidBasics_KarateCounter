@@ -28,6 +28,10 @@
         android:inputType="textCapWords"
         android:hint="@string/contestant_2_name_hint"
         android:textAlignment="center"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
     <Button
         android:id="@+id/fight_button"
         android:layout_width="wrap_content"

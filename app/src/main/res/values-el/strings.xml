@@ -1,4 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Karate Counter</string>
+    <string name="app_name">Καρατέκα</string>
+    <string name="instructionsStr">Yuko (1 πόντος): Μπουνιά μέση ή ψηλή. Waza-Ari (2 πόντοι): Κλοτσιά στη μέση. Ippon (3 πόντοι): Κλοτσιά στο κεφάλι ή οποιαδήποτε τεχνική σε αντίπαλο που έριξε ο αγωνιζόμενος. Ποινές: 4 πέναλτυ οδηγούν στην διαγραφή του διαγωνιζόμενου.</string>
+    <string name="contestant_1">Διαγωνιζόμενος 1</string>
+    <string name="contestant_2">Διαγωνιζόμενος 2</string>
+    <string name="one_point">Yuko</string>
+    <string name="two_points">Waza-Ari</string>
+    <string name="three_points">Ippon</string>
+    <string name="new_match">Νέος αγώνας</string>
+    <string name="penalties">Ποινές:</string>
+    <string name="disqualified_toast_message">: διαγραφή διαγωνιζόμενου λόγω τεχνικών ποινών (πέναλτυ)</string>
+    <string name="disqualified_title">Διαγραφή</string>
+    <string name="disqualified_dialogue">: διαγράφηκε αυτόματα μετά από την 4η τεχνική ποινή.</string>
+    <string name="contestant_1_name_hint">Εισαγωγή 1ου διαγωνιζόμενου</string>
+    <string name="contestant_2_name_hint">Εισαγωγή 2ου διαγωνιζόμενου</string>
+    <string name="fight_button_text">Αγώνας</string>
+    <string name="penalty_button_text">Τεχνική ποινή</string>
 </resources>

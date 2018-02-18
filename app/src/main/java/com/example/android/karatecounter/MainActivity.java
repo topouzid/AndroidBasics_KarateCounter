@@ -18,7 +18,10 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    int scoreContestant1, scoreContestant2, penaltiesContestant1, penaltiesContestant2;
+    int scoreContestant1;
+    int scoreContestant2;
+    int penaltiesContestant1;
+    int penaltiesContestant2;
     int disqualifiedContestantNumber = 0;
     boolean enabledButtonsBoolean = true;
     String penaltyYellowColor = "#FFAE18";
@@ -300,41 +303,44 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    /** the following method is the variant that uses the color from the xml,
-     * but crashes the app
-     public void setPenaltyCard1Contestant1Color (int color) {
-     View penaltyView = (View) findViewById(R.id.card1cont1);
-     penaltyView.setBackgroundColor(color);
-     }
+    /** the following methods set the colors of the penalty cards
+     * @param color hex code color
      */
     public void setPenaltyCard1Contestant1Color (String color) {
         View penaltyView = (View) findViewById(R.id.card1cont1);
         penaltyView.setBackgroundColor(Color.parseColor(color));
     }
+
     public void setPenaltyCard2Contestant1Color (String color) {
         View penaltyView = (View) findViewById(R.id.card2cont1);
         penaltyView.setBackgroundColor(Color.parseColor(color));
     }
+
     public void setPenaltyCard3Contestant1Color (String color) {
         View penaltyView = (View) findViewById(R.id.card3cont1);
         penaltyView.setBackgroundColor(Color.parseColor(color));
     }
+
     public void setPenaltyCard4Contestant1Color (String color) {
         View penaltyView = (View) findViewById(R.id.card4cont1);
         penaltyView.setBackgroundColor(Color.parseColor(color));
     }
+
     public void setPenaltyCard1Contestant2Color (String color) {
         View penaltyView = (View) findViewById(R.id.card1cont2);
         penaltyView.setBackgroundColor(Color.parseColor(color));
     }
+
     public void setPenaltyCard2Contestant2Color (String color) {
         View penaltyView = (View) findViewById(R.id.card2cont2);
         penaltyView.setBackgroundColor(Color.parseColor(color));
     }
+
     public void setPenaltyCard3Contestant2Color (String color) {
         View penaltyView = (View) findViewById(R.id.card3cont2);
         penaltyView.setBackgroundColor(Color.parseColor(color));
     }
+
     public void setPenaltyCard4Contestant2Color (String color) {
         View penaltyView = (View) findViewById(R.id.card4cont2);
         penaltyView.setBackgroundColor(Color.parseColor(color));

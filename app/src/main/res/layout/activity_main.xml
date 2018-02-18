@@ -70,28 +70,16 @@
                         android:padding="@dimen/label_padding">
                         <View
                             android:id="@+id/card1cont1"
-                            android:layout_width="@dimen/card_width"
-                            android:layout_height="@dimen/card_height"
-                            android:layout_margin="@dimen/penalty_card_margin"
-                            android:background="@color/penaltyClear" />
+                            style="@style/penaltyCardsCleanStyle" />
                         <View
                             android:id="@+id/card2cont1"
-                            android:layout_width="@dimen/card_width"
-                            android:layout_height="@dimen/card_height"
-                            android:layout_margin="@dimen/penalty_card_margin"
-                            android:background="@color/penaltyClear" />
+                            style="@style/penaltyCardsCleanStyle" />
                         <View
                             android:id="@+id/card3cont1"
-                            android:layout_width="@dimen/card_width"
-                            android:layout_height="@dimen/card_height"
-                            android:layout_margin="@dimen/penalty_card_margin"
-                            android:background="@color/penaltyClear" />
+                            style="@style/penaltyCardsCleanStyle" />
                         <View
                             android:id="@+id/card4cont1"
-                            android:layout_width="@dimen/card_width"
-                            android:layout_height="@dimen/card_height"
-                            android:layout_margin="@dimen/penalty_card_margin"
-                            android:background="@color/penaltyClear" />
+                            style="@style/penaltyCardsCleanStyle" />
                     </LinearLayout>
                     <TextView
                         android:id="@+id/penaltiesContestant1"
@@ -104,34 +92,22 @@
                 </RelativeLayout>
                 <Button
                     android:id="@+id/btnYukoPlayer1"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="@dimen/button_margin_horizontal"
-                    android:layout_marginRight="@dimen/button_margin_horizontal"
+                    style="@style/buttonStyle"
                     android:onClick="addOneForContestantOne_YUKO"
                     android:text="@string/one_point" />
                 <Button
                     android:id="@+id/btnWazaAriPlayer1"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="@dimen/button_margin_horizontal"
-                    android:layout_marginRight="@dimen/button_margin_horizontal"
+                    style="@style/buttonStyle"
                     android:onClick="addTwoForContestantOne_WAZAARI"
                     android:text="@string/two_points" />
                 <Button
                     android:id="@+id/btnIpponPlayer1"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="@dimen/button_margin_horizontal"
-                    android:layout_marginRight="@dimen/button_margin_horizontal"
+                    style="@style/buttonStyle"
                     android:onClick="addThreeForContestantOne_NIPPON"
                     android:text="@string/three_points" />
                 <Button
                     android:id="@+id/btnPenaltyPlayer1"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="@dimen/button_margin_horizontal"
-                    android:layout_marginRight="@dimen/button_margin_horizontal"
+                    style="@style/buttonStyle"
                     android:layout_marginTop="@dimen/button_margin_vertical"
                     android:onClick="addPenaltyForContestantOne"
                     android:text="@string/penalty_button_text" />
@@ -186,28 +162,16 @@
                         android:padding="@dimen/label_padding">
                         <View
                             android:id="@+id/card1cont2"
-                            android:layout_width="@dimen/card_width"
-                            android:layout_height="@dimen/card_height"
-                            android:layout_margin="@dimen/penalty_card_margin"
-                            android:background="@color/penaltyClear" />
+                            style="@style/penaltyCardsCleanStyle" />
                         <View
                             android:id="@+id/card2cont2"
-                            android:layout_width="@dimen/card_width"
-                            android:layout_height="@dimen/card_height"
-                            android:layout_margin="@dimen/penalty_card_margin"
-                            android:background="@color/penaltyClear" />
+                            style="@style/penaltyCardsCleanStyle" />
                         <View
                             android:id="@+id/card3cont2"
-                            android:layout_width="@dimen/card_width"
-                            android:layout_height="@dimen/card_height"
-                            android:layout_margin="@dimen/penalty_card_margin"
-                            android:background="@color/penaltyClear" />
+                            style="@style/penaltyCardsCleanStyle" />
                         <View
                             android:id="@+id/card4cont2"
-                            android:layout_width="@dimen/card_width"
-                            android:layout_height="@dimen/card_height"
-                            android:layout_margin="@dimen/penalty_card_margin"
-                            android:background="@color/penaltyClear" />
+                            style="@style/penaltyCardsCleanStyle" />
                     </LinearLayout>
                     <TextView
                         android:id="@+id/penaltiesContestant2"
@@ -220,34 +184,22 @@
                 </RelativeLayout>
                 <Button
                     android:id="@+id/btnYukoPlayer2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="@dimen/button_margin_horizontal"
-                    android:layout_marginRight="@dimen/button_margin_horizontal"
+                    style="@style/buttonStyle"
                     android:onClick="addOneForContestantTwo_YUKO"
                     android:text="@string/one_point" />
                 <Button
                     android:id="@+id/btnWazaAriPlayer2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="@dimen/button_margin_horizontal"
-                    android:layout_marginRight="@dimen/button_margin_horizontal"
+                    style="@style/buttonStyle"
                     android:onClick="addTwoForContestantTwo_WAZAARI"
                     android:text="@string/two_points" />
                 <Button
                     android:id="@+id/btnIpponPlayer2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="@dimen/button_margin_horizontal"
-                    android:layout_marginRight="@dimen/button_margin_horizontal"
+                    style="@style/buttonStyle"
                     android:onClick="addThreeForContestantTwo_NIPPON"
                     android:text="@string/three_points" />
                 <Button
                     android:id="@+id/btnPenaltyPlayer2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="@dimen/button_margin_horizontal"
-                    android:layout_marginRight="@dimen/button_margin_horizontal"
+                    style="@style/buttonStyle"
                     android:layout_marginTop="@dimen/button_margin_vertical"
                     android:onClick="addPenaltyForContestantTwo"
                     android:text="@string/penalty_button_text" />
@@ -261,8 +213,7 @@
             android:layout_gravity="center">
             <Button
                 android:id="@+id/button_new"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/buttonStyle"
                 android:layout_centerInParent="true"
                 android:layout_centerHorizontal="true"
                 android:onClick="newMatch"

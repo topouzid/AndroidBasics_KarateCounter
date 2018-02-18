@@ -23,7 +23,6 @@
                 android:textSize="@dimen/text_label_size"
                 android:text="@string/contestant_1"
                 android:gravity="center_horizontal"/>
-
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -41,44 +40,44 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
-                    android:padding="4dp"
+                    android:padding="@dimen/label_padding"
                     android:layout_toLeftOf="@id/penaltiesContestant1">
                     <View
                         android:id="@+id/card1cont1"
-                        android:layout_width="10dp"
-                        android:layout_height="16dp"
+                        android:layout_width="@dimen/card_width"
+                        android:layout_height="@dimen/card_height"
                         android:layout_margin="@dimen/penalty_card_margin"
                         android:background="@color/penaltyClear" />
                     <View
                         android:id="@+id/card2cont1"
-                        android:layout_width="10dp"
-                        android:layout_height="16dp"
+                        android:layout_width="@dimen/card_width"
+                        android:layout_height="@dimen/card_height"
                         android:layout_margin="@dimen/penalty_card_margin"
                         android:background="@color/penaltyClear" />
                     <View
                         android:id="@+id/card3cont1"
-                        android:layout_width="10dp"
-                        android:layout_height="16dp"
+                        android:layout_width="@dimen/card_width"
+                        android:layout_height="@dimen/card_height"
                         android:layout_margin="@dimen/penalty_card_margin"
                         android:background="@color/penaltyClear" />
                     <View
                         android:id="@+id/card4cont1"
-                        android:layout_width="10dp"
-                        android:layout_height="16dp"
+                        android:layout_width="@dimen/card_width"
+                        android:layout_height="@dimen/card_height"
                         android:layout_margin="@dimen/penalty_card_margin"
                         android:background="@color/penaltyClear" />
                 </LinearLayout>
-
                 <TextView
                     android:id="@+id/penaltiesContestant1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingTop="@dimen/label_padding"
-                    android:paddingRight="4dp"
+                    android:paddingRight="@dimen/label_padding"
                     android:text="0"
                     android:layout_alignParentRight="true"/>
             </RelativeLayout>
             <Button
+                android:id="@+id/btnYukoPlayer1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/one_point"
@@ -86,6 +85,7 @@
                 android:layout_marginRight="@dimen/button_margin_horizontal"
                 android:onClick="addOneForContestantOne_YUKO"/>
             <Button
+                android:id="@+id/btnWazaAriPlayer1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/two_points"
@@ -93,6 +93,7 @@
                 android:layout_marginRight="@dimen/button_margin_horizontal"
                 android:onClick="addTwoForContestantOne_WAZAARI"/>
             <Button
+                android:id="@+id/btnIpponPlayer1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/three_points"
@@ -100,6 +101,7 @@
                 android:layout_marginRight="@dimen/button_margin_horizontal"
                 android:onClick="addThreeForContestantOne_NIPPON"/>
             <Button
+                android:id="@+id/btnPenaltyPlayer1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/penalty_button_text"
@@ -107,7 +109,6 @@
                 android:layout_marginLeft="@dimen/button_margin_horizontal"
                 android:layout_marginRight="@dimen/button_margin_horizontal"
                 android:onClick="addPenaltyForContestantOne"/>
-
         </LinearLayout>
         <LinearLayout
             android:layout_weight="1"
@@ -120,7 +121,7 @@
                 <ImageView
                     android:id="@+id/image_logo"
                     android:layout_width="match_parent"
-                    android:layout_height="100dp"
+                    android:layout_height="@dimen/landscape_image_height"
                     android:scaleType="fitCenter"
                     android:src="@drawable/karate"
                     android:layout_below="@id/scoreBoard"
@@ -153,7 +154,6 @@
                         android:layout_alignParentRight="true"
                         android:gravity="center_horizontal"/>
                 </LinearLayout>
-
             </RelativeLayout>
         </LinearLayout>
         <LinearLayout
@@ -170,14 +170,12 @@
                 android:textSize="@dimen/text_label_size"
                 android:text="@string/contestant_2"
                 android:gravity="center_horizontal"/>
-
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingTop="@dimen/activity_vertical_margin_landscape"
                 android:paddingLeft="@dimen/activity_horizontal_margin"
                 android:paddingRight="@dimen/activity_horizontal_margin">
-
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -185,43 +183,37 @@
                     android:padding="@dimen/label_padding"
                     android:text="@string/penalties"
                     android:textSize="@dimen/text_label_size" />
-
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_toLeftOf="@id/penaltiesContestant2"
                     android:orientation="horizontal"
-                    android:padding="4dp">
-
+                    android:padding="@dimen/label_padding">
                     <View
                         android:id="@+id/card1cont2"
-                        android:layout_width="10dp"
-                        android:layout_height="16dp"
+                        android:layout_width="@dimen/card_width"
+                        android:layout_height="@dimen/card_height"
                         android:layout_margin="@dimen/penalty_card_margin"
                         android:background="@color/penaltyClear" />
-
                     <View
                         android:id="@+id/card2cont2"
-                        android:layout_width="10dp"
-                        android:layout_height="16dp"
+                        android:layout_width="@dimen/card_width"
+                        android:layout_height="@dimen/card_height"
                         android:layout_margin="@dimen/penalty_card_margin"
                         android:background="@color/penaltyClear" />
-
                     <View
                         android:id="@+id/card3cont2"
-                        android:layout_width="10dp"
-                        android:layout_height="16dp"
+                        android:layout_width="@dimen/card_width"
+                        android:layout_height="@dimen/card_height"
                         android:layout_margin="@dimen/penalty_card_margin"
                         android:background="@color/penaltyClear" />
-
                     <View
                         android:id="@+id/card4cont2"
-                        android:layout_width="10dp"
-                        android:layout_height="16dp"
+                        android:layout_width="@dimen/card_width"
+                        android:layout_height="@dimen/card_height"
                         android:layout_margin="@dimen/penalty_card_margin"
                         android:background="@color/penaltyClear" />
                 </LinearLayout>
-
                 <TextView
                     android:id="@+id/penaltiesContestant2"
                     android:layout_width="wrap_content"
@@ -231,8 +223,8 @@
                     android:paddingTop="@dimen/label_padding"
                     android:text="0" />
             </RelativeLayout>
-
             <Button
+                android:id="@+id/btnYukoPlayer2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/one_point"
@@ -240,6 +232,7 @@
                 android:layout_marginRight="@dimen/button_margin_horizontal"
                 android:onClick="addOneForContestantTwo_YUKO"/>
             <Button
+                android:id="@+id/btnWazaAriPlayer2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/two_points"
@@ -247,6 +240,7 @@
                 android:layout_marginRight="@dimen/button_margin_horizontal"
                 android:onClick="addTwoForContestantTwo_WAZAARI"/>
             <Button
+                android:id="@+id/btnIpponPlayer2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/three_points"
@@ -254,6 +248,7 @@
                 android:layout_marginRight="@dimen/button_margin_horizontal"
                 android:onClick="addThreeForContestantTwo_NIPPON"/>
             <Button
+                android:id="@+id/btnPenaltyPlayer2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/penalty_button_text"
@@ -261,9 +256,7 @@
                 android:layout_marginLeft="@dimen/button_margin_horizontal"
                 android:layout_marginRight="@dimen/button_margin_horizontal"
                 android:onClick="addPenaltyForContestantTwo"/>
-
         </LinearLayout>
-
     </LinearLayout>
     <Button
         android:layout_width="wrap_content"
@@ -284,6 +277,4 @@
         android:textSize="@dimen/small_text"
         android:text="@string/instructionsStr"
         android:layout_alignParentBottom="true" />
-
-
 </RelativeLayout>

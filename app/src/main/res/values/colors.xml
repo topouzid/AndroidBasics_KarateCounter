@@ -7,4 +7,5 @@
     <color name="penaltyYellow">#FFAE18</color>
     <color name="penaltyRed">#FF2600</color>
     <color name="penaltyClear">#e7e7e7</color>
+    <color name="disqualifiedContestantColor">#22000000</color>
 </resources>

@@ -16,4 +16,5 @@ Penalties: 4 penalties mean disqualification of contestant.</string>
     <string name="contestant_2_name_hint">"Enter 2nd contestant\'s name"</string>
     <string name="fight_button_text">Fight</string>
     <string name="penalty_button_text">Penalty</string>
+    <string name="game_over" translatable="false">Game over!</string>
 </resources>

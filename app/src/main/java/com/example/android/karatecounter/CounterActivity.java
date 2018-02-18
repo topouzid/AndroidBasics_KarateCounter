@@ -3,7 +3,6 @@ package com.example.android.karatecounter;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -37,18 +36,6 @@ public class CounterActivity extends AppCompatActivity {
         super.onSaveInstanceState(outState);
     }
 
-    /**
-     * This callback is called only when there is a saved instance previously saved using
-     * onSaveInstanceState(). We restore some state in onCreate() while we can optionally restore
-     * other state here, possibly usable after onStart() has completed.
-     * The savedInstanceState Bundle is same as the one used in onCreate().
-     */
-
-//    @Override
-//    public void onRestoreInstanceState(Bundle savedInstanceState) {
-//        contestant1Name = (String) savedInstanceState.getString(CONTESTANT_1_NAME);
-//        contestant2Name = (String) savedInstanceState.getString(CONTESTANT_2_NAME);
-//    }
     /**
      * save name from edittext1
      */
